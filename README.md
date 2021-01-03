@@ -57,5 +57,8 @@ Here are some ideas to get you started:
 ## Connect with me
 ## Languages and tools
 https://github.com/anuraghazra
+https://github.com/anuraghazra/github-readme-stats
+https://github.com/codeSTACKr/codeSTACKr
+https://www.youtube.com/watch?v=ECuqb5Tv9qI
 
 -->
