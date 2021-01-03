@@ -25,7 +25,16 @@ Welcome to my GitHub profile.
 <details>
   <summary>:zap: GitHub Stats</summary>
 
-  <img align="left" alt="vladiant's GitHub Stats" src="https://github-readme-stats.codestackr.vercel.app/api?username=vladiant&show_icons=true&hide_border=true" />
+  <img align="left" alt="vladiant's GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=vladiant&show_icons=true&hide_border=true" />
+
+</details>
+
+---
+
+<details>
+  <summary>:zap: Most Used Languages</summary>
+
+  <img align="left" alt="vladiant's Most Used Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=vladiant&show_icons=true&hide_border=true" />
 
 </details>
 
@@ -46,5 +55,6 @@ Here are some ideas to get you started:
 ## I am a ...
 ## Connect with me
 ## Languages and tools
+https://github.com/anuraghazra
 
 -->
