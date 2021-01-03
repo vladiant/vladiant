@@ -1,19 +1,17 @@
-## Hi there
+## Welcome to my GitHub profile
 
-Welcome to my GitHub profile.
-
-## I’m currently working on 
+### Currently working on 
 * Preparation of my GitHub site
 * Adding various snippets for
    * C++
    * Computer Vision / OpenCV
    * Machine & Deep Learning
 
-## I’m currently learning
+### Currently learning
 * Python
 * Machine & Deep Learning
 
-## Languages and tools
+### Languages and tools
 <img align="left" alt="Cpp" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/cpp/cpp.png" />
 <img align="left" alt="OpenCV" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/opencv/opencv.png" />
 <img align="left" alt="Git" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" />
