@@ -56,8 +56,41 @@ Here are some ideas to get you started:
 ## Connect with me
 ## Languages and tools
 https://github.com/anuraghazra
+
+To be forked for registration
 https://github.com/anuraghazra/github-readme-stats
+
+Repo of tutorial
 https://github.com/codeSTACKr/codeSTACKr
+
+Video part 1
 https://www.youtube.com/watch?v=ECuqb5Tv9qI
 
+Video part 2
+https://www.youtube.com/watch?v=n6d4KHSKqGk
+
+Icons
+https://github.com/simple-icons/simple-icons
+https://simpleicons.org/
+
+Search specific icon - C++
+https://github.com/search?q=cpp
+
+Badges
+https://github.com/badges/shields
+https://github.com/alexandresanlim/Badges4-README.md-Profile
+https://github.com/Ileriayo/markdown-badges
+
+Github Activity
+https://github.com/jamesgeorge007/github-activity-readme
+https://github.com/marketplace/actions/profile-readme-development-stats
+
+Github Profile Readme Generator
+https://github.com/rahuldkjain
+https://github.com/rahuldkjain/github-profile-readme-generator
+https://rahuldkjain.github.io/gh-profile-readme-generator/
+
+Github Profile Examples and Resources
+https://github.com/abhisheknaiidu
+https://github.com/abhisheknaiidu/awesome-github-profile-readme
 -->
