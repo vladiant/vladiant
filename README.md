@@ -62,6 +62,7 @@ https://github.com/anuraghazra/github-readme-stats
 
 Repo of tutorial
 https://github.com/codeSTACKr/codeSTACKr
+https://github.com/eddiejaoude
 
 Video part 1
 https://www.youtube.com/watch?v=ECuqb5Tv9qI
@@ -93,4 +94,8 @@ https://rahuldkjain.github.io/gh-profile-readme-generator/
 Github Profile Examples and Resources
 https://github.com/abhisheknaiidu
 https://github.com/abhisheknaiidu/awesome-github-profile-readme
+
+Actions
+https://github.com/marketplace/category/code-quality
+https://github.com/collections/clean-code-linters
 -->
