@@ -1,4 +1,4 @@
-## Welcome to my GitHub profile
+## Welcome to my code repositories
 
 ### Currently working on 
 * Machine Learning Sample Projects
