@@ -1,15 +1,28 @@
 ## Welcome to my code repositories
 
 ### Currently working on 
-* Machine Learning Sample Projects
+* C++ Sample Projects
 * Adding various snippets for
    * C++
-   * Computer Vision / OpenCV
-   * Machine & Deep Learning
+   * Current studies
+* Image deblurring
 
 ### Currently learning
-* Python
+* Software Architecture
+* [Microservices](https://microservices.io/)
+* [Kafka](https://kafka.apache.org/)
+* [gRPC](https://grpc.io/)
+* [Kubernetes](https://kubernetes.io/)
+* [Prometheus](https://prometheus.io/)
+
+### Interested in
+* Rust
+* Computer Vision / OpenCV
 * Machine & Deep Learning
+* OpenCL
+* CUDA
+* OpenGL
+* Python
 * Go
 
 ### Languages and tools
