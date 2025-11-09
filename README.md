@@ -2,7 +2,7 @@
 
 ### Currently working on 
 * C++ Sample Projects
-* Learning by Projects 
+* Microservices Sample Projects 
 * Image deblurring
 
 ### Currently learning
@@ -14,7 +14,7 @@
 * [Prometheus](https://prometheus.io/)
 
 ### Interested in
-* Rust / Python / Go
+* C++ / Python / Go
 * Computer Vision / OpenCV
 * Machine & Deep Learning
 * OpenCL / CUDA / OpenGL
