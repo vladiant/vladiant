@@ -1,4 +1,4 @@
-## How to handle cross-cutting concerns, such as security, in a Microservices architecture?
+# How to handle cross-cutting concerns, such as security, in a Microservices architecture?
 
 Cross-cutting concerns — security, logging, tracing, rate limiting, configuration — are the hardest part of microservices because they **span every service** but shouldn't be **duplicated in every service**. The architectural challenge is: how do you enforce consistency without creating coupling?
 
