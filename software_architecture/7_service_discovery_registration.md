@@ -156,7 +156,7 @@ The orchestration platform provides discovery as a built-in feature.
 ```mermaid
 graph TB
     subgraph "Kubernetes Cluster"
-        SA[Pod: Service A] -- "order-service:8080<br/>(Kubernetes Service DNS)" --> KS[Kubernetes Service<br/>(Virtual IP: ClusterIP)]
+        SA[Pod: Service A] -- "order-service:8080<br/>(Kubernetes Service DNS)" --> KS["Kubernetes Service<br/>(Virtual IP: ClusterIP)"]
         KS -- "kube-proxy / iptables" --> OB1[Pod: Order Service 1]
         KS -- "kube-proxy / iptables" --> OB2[Pod: Order Service 2]
         KS -- "kube-proxy / iptables" --> OB3[Pod: Order Service 3]
