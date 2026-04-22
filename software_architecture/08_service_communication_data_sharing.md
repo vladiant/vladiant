@@ -114,7 +114,7 @@ graph LR
 
 ```mermaid
 graph LR
-    OS[Order Service] -- "OrderPlaced { orderId, customerId, total }" --> BROKER[(Event Broker)]
+    OS[Order Service] -- "OrderPlaced &#123; orderId, customerId, total &#125;" --> BROKER[(Event Broker)]
     BROKER --> INV[Inventory Service]
     BROKER --> NOTIFY[Notification Service]
     BROKER --> ANALYTICS[Analytics Service]
@@ -134,7 +134,7 @@ graph LR
 
 ```mermaid
 graph LR
-    PS[Product Service] -- "ProductUpdated {<br/>id: 123,<br/>name: 'Widget',<br/>price: 9.99,<br/>category: 'Tools'<br/>}" --> BROKER[(Event Broker)]
+    PS[Product Service] -- "ProductUpdated &#123;<br/>id: 123,<br/>name: 'Widget',<br/>price: 9.99,<br/>category: 'Tools'<br/>&#125;" --> BROKER[(Event Broker)]
     BROKER --> OS[Order Service<br/>Local Product Cache]
     BROKER --> SEARCH[Search Service<br/>Local Product Index]
 ```
@@ -154,9 +154,9 @@ graph LR
 
 ```mermaid
 graph LR
-    OS[Order Service] -- "ProcessPayment {<br/>orderId: 456,<br/>amount: 99.99,<br/>currency: USD<br/>}" --> Q[(Command Queue)]
+    OS[Order Service] -- "ProcessPayment &#123;<br/>orderId: 456,<br/>amount: 99.99,<br/>currency: USD<br/>&#125;" --> Q[(Command Queue)]
     Q --> PS[Payment Service]
-    PS -- "PaymentResult {<br/>orderId: 456,<br/>status: SUCCESS<br/>}" --> RQ[(Reply Queue)]
+    PS -- "PaymentResult &#123;<br/>orderId: 456,<br/>status: SUCCESS<br/>&#125;" --> RQ[(Reply Queue)]
     RQ --> OS
 ```
 
