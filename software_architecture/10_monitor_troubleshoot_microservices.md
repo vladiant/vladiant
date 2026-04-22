@@ -24,19 +24,19 @@ Monitoring tells you **something is wrong**. Observability tells you **why it's 
 ```mermaid
 graph TB
     subgraph "Pillar 1: Metrics"
-        M[Numeric time-series data<br/>Aggregated, cheap to store<br/>"How much?"]
+        M["Numeric time-series data<br/>Aggregated, cheap to store<br/>'How much?'"]
     end
 
     subgraph "Pillar 2: Logs"
-        L[Structured event records<br/>Detailed, high volume<br/>"What happened?"]
+        L["Structured event records<br/>Detailed, high volume<br/>'What happened?'"]
     end
 
     subgraph "Pillar 3: Traces"
-        T[Distributed call graphs<br/>Request-scoped, sampled<br/>"Where did time go?"]
+        T["Distributed call graphs<br/>Request-scoped, sampled<br/>'Where did time go?'"]
     end
 
     subgraph "Context: Events"
-        E[Deployments, config changes,<br/>scaling events, incidents<br/>"What changed?"]
+        E["Deployments, config changes,<br/>scaling events, incidents<br/>'What changed?'"]
     end
 
     M --- CORRELATION[Correlation<br/>via traceId, service name,<br/>timestamp]
@@ -344,9 +344,9 @@ graph TD
 ```mermaid
 graph TB
     subgraph "Kubernetes Probes"
-        LP[Liveness Probe<br/>GET /healthz<br/>"Is the process alive?"]
-        RP[Readiness Probe<br/>GET /readyz<br/>"Can it handle traffic?"]
-        SP[Startup Probe<br/>GET /startupz<br/>"Has it finished initializing?"]
+        LP["Liveness Probe<br/>GET /healthz<br/>'Is the process alive?'"]
+        RP["Readiness Probe<br/>GET /readyz<br/>'Can it handle traffic?'"]
+        SP["Startup Probe<br/>GET /startupz<br/>'Has it finished initializing?'"]
     end
 
     LP -- "Failed" --> RESTART[Container restart]
