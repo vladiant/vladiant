@@ -101,7 +101,7 @@ graph TB
 
     subgraph "Asynchronous (Events/Integration)"
         direction LR
-        J2[Java Service] -- "Domain Events<br/>(Protobuf/Avro)" --> K[(Kafka / RabbitMQ)]
+        J2[Java Service] -- "Domain Events (Protobuf/Avro)" --> K[(Kafka / RabbitMQ)]
         K -- "Domain Events" --> N2[.NET Service]
     end
 

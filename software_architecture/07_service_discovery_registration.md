@@ -81,8 +81,8 @@ graph TB
 
     SA[Service A<br/>+ Discovery Client<br/>+ Client-Side LB] -- "1. Query registry" --> REG
     REG -- "2. Return instances" --> SA
-    SA -- "3. Direct call<br/>(round-robin)" --> OB1[Order Service<br/>10.0.2.5:8080]
-    SA -- "3. Direct call<br/>(round-robin)" --> OB2[Order Service<br/>10.0.3.12:8080]
+    SA -- "3. Direct call (round-robin)" --> OB1[Order Service<br/>10.0.2.5:8080]
+    SA -- "3. Direct call (round-robin)" --> OB2[Order Service<br/>10.0.3.12:8080]
 
     OB1 -- "Register + heartbeat" --> REG
     OB2 -- "Register + heartbeat" --> REG
@@ -107,7 +107,7 @@ graph TB
         REG[(Registry)]
     end
 
-    SA[Service A] -- "1. Call order-service<br/>via LB" --> LB[Load Balancer<br/>/ API Gateway]
+    SA[Service A] -- "1. Call order-service via LB" --> LB[Load Balancer<br/>/ API Gateway]
     LB -- "2. Query registry" --> REG
     REG -- "3. Return instances" --> LB
     LB -- "4. Route" --> OB1[Order Service<br/>10.0.2.5:8080]
@@ -132,7 +132,7 @@ Use DNS SRV or A records that update dynamically as instances change.
 
 ```mermaid
 graph TB
-    SA[Service A] -- "1. DNS lookup:<br/>order-service.internal" --> DNS[DNS Server<br/>Consul DNS / CoreDNS]
+    SA[Service A] -- "1. DNS lookup: order-service.internal" --> DNS[DNS Server<br/>Consul DNS / CoreDNS]
     DNS -- "2. Resolve" --> SA
     SA -- "3. Direct call" --> OB1[10.0.2.5:8080]
 
@@ -156,7 +156,7 @@ The orchestration platform provides discovery as a built-in feature.
 ```mermaid
 graph TB
     subgraph "Kubernetes Cluster"
-        SA[Pod: Service A] -- "order-service:8080<br/>(Kubernetes Service DNS)" --> KS["Kubernetes Service<br/>(Virtual IP: ClusterIP)"]
+        SA[Pod: Service A] -- "order-service:8080 (Kubernetes Service DNS)" --> KS["Kubernetes Service<br/>(Virtual IP: ClusterIP)"]
         KS -- "kube-proxy / iptables" --> OB1[Pod: Order Service 1]
         KS -- "kube-proxy / iptables" --> OB2[Pod: Order Service 2]
         KS -- "kube-proxy / iptables" --> OB3[Pod: Order Service 3]
@@ -164,7 +164,7 @@ graph TB
 
     subgraph "With Service Mesh (Istio)"
         SA2[Pod: Service A] --> EP[Envoy Sidecar Proxy]
-        EP -- "Discovers endpoints<br/>via control plane" --> OB4[Pod: Order Service]
+        EP -- "Discovers endpoints via control plane" --> OB4[Pod: Order Service]
         CP[Istio Control Plane] -.-> EP
     end
 ```
