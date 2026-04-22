@@ -317,7 +317,7 @@ graph TB
     subgraph "CI Pipeline"
         BUILD[Build + Unit Tests]
         SAST[SAST / Security Scan]
-        INTEGRATION[Integration Tests<br/>Contract Tests (Pact)]
+        INTEGRATION["Integration Tests<br/>Contract Tests (Pact)"]
         IMAGE[Build Container Image<br/>Tag: git-sha]
         REGISTRY[Push to Container Registry]
     end
