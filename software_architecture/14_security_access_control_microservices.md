@@ -385,10 +385,10 @@ sequenceDiagram
     participant A as Order Service
     participant B as Payment Service
 
-    C->>GW: Request + JWT (scope: orders:write, payments:charge)
+    C->>GW: Request + JWT (scope orders:write, payments:charge)
     GW->>A: Forward JWT
     A->>B: Forward same JWT
-    Note over B: Validates JWT; checks scope includes payments:charge
+    Note over B: Validates JWT and checks scope includes payments:charge
     B-->>A: Response
 ```
 

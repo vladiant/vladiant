@@ -189,7 +189,7 @@ graph TB
         ENTRY --> META[Metadata<br/>Owner: Team Orders<br/>Lifecycle: Production<br/>Tier: Critical<br/>Language: Java 21<br/>Framework: Spring Boot 3.x]
         ENTRY --> API[APIs<br/>OpenAPI spec<br/>AsyncAPI spec<br/>Proto definitions]
         ENTRY --> DEPS[Dependencies<br/>Consumes: payment-service, inventory-service<br/>Consumed by: BFF, analytics-pipeline]
-        ENTRY --> INFRA[Infrastructure<br/>Kubernetes namespace: orders<br/>Database: Postgres (RDS)<br/>Queue: Kafka topic: orders.events]
+        ENTRY --> INFRA["Infrastructure<br/>Kubernetes namespace: orders<br/>Database: Postgres (RDS)<br/>Queue: Kafka topic: orders.events"]
         ENTRY --> OBS3[Observability<br/>Dashboard: link<br/>Runbook: link<br/>On-call: link]
         ENTRY --> HEALTH[Health Score<br/>SLO compliance: 99.95%<br/>Last deploy: 2 hours ago<br/>Open incidents: 0<br/>Tech debt score: Low]
     end
