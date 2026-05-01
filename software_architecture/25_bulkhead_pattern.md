@@ -328,11 +328,11 @@ sequenceDiagram
 
 **Formula:**
 
-$$\text{pool\_size} = \text{RPS} \times \text{P99\_latency\_sec} \times \text{headroom\_factor}$$
+$$\text{poolSize} = \text{RPS} \times \text{P99LatencySec} \times \text{headroomFactor}$$
 
 **Example:** 100 RPS to Payment Service, P99 = 200ms, headroom = 1.5×
 
-$$\text{pool\_size} = 100 \times 0.2 \times 1.5 = 30 \text{ threads}$$
+$$\text{poolSize} = 100 \times 0.2 \times 1.5 = 30\ \text{threads}$$
 
 ---
 
