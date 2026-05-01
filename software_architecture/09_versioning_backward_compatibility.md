@@ -200,7 +200,7 @@ Consumer ignores unknown fields, applies defaults for missing fields.
 ```mermaid
 graph LR
     subgraph "Producer sends v2"
-        V2["{<br/>id: 123,<br/>name: 'Widget',<br/>category: 'Tools'  ← NEW<br/>}"]
+        V2["&#123;<br/>id: 123,<br/>name: 'Widget',<br/>category: 'Tools'  ← NEW<br/>&#125;"]
     end
 
     subgraph "Old Consumer (expects v1)"
@@ -247,13 +247,13 @@ A three-phase approach for breaking changes:
 ```mermaid
 graph LR
     subgraph "Phase 1: Expand"
-        E["Add new field alongside old<br/>{ userName, username }"]
+        E["Add new field alongside old<br/>&#123; userName, username &#125;"]
     end
     subgraph "Phase 2: Migrate"
         M["Consumers switch to new field<br/>Read 'username' instead of 'userName'"]
     end
     subgraph "Phase 3: Contract"
-        C["Remove old field<br/>{ username }"]
+        C["Remove old field<br/>&#123; username &#125;"]
     end
 
     E --> M --> C

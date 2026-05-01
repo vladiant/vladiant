@@ -392,7 +392,7 @@ Debezium provides a dedicated **Outbox Event Router** SMT (Single Message Transf
 ```mermaid
 graph LR
     subgraph "Debezium Outbox Event Router"
-        DB[(outbox table<br/>aggregate_type=Order<br/>event_type=OrderCreated<br/>payload={...})] --> DEB[Debezium Connector]
+        DB[(outbox table<br/>aggregate_type=Order<br/>event_type=OrderCreated<br/>payload: example JSON)] --> DEB[Debezium Connector]
         DEB --> SMT[Outbox Event Router<br/>SMT Transform]
         SMT -->|Route to topic:<br/>outbox.event.Order| KAFKA[(Kafka<br/>topic: outbox.event.Order)]
     end

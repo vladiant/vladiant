@@ -313,9 +313,9 @@ graph TD
     end
 
     subgraph "Error Response Shaping"
-        RAW["gRPC Error:<br/>code: UNAVAILABLE<br/>message: connection refused<br/>details: {retry_info: {delay: 500ms}}"]
+        RAW["gRPC Error:<br/>code: UNAVAILABLE<br/>message: connection refused<br/>details: &#123;retry_info: &#123;delay: 500ms&#125;&#125;"]
         
-        SHAPED["Mobile Error:<br/>{<br/>  errorCode: 'SERVICE_UNAVAILABLE',<br/>  userMessage: 'Orders temporarily unavailable',<br/>  retryable: true,<br/>  retryAfterMs: 500<br/>}"]
+        SHAPED["Mobile Error:<br/>&#123;<br/>  errorCode: 'SERVICE_UNAVAILABLE',<br/>  userMessage: 'Orders temporarily unavailable',<br/>  retryable: true,<br/>  retryAfterMs: 500<br/>&#125;"]
         
         RAW -->|BFF transforms| SHAPED
     end

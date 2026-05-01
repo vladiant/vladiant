@@ -429,7 +429,7 @@ graph TB
     GW --> S2[Order Service]
     GW --> S3[Product Service]
     
-    GW --> RESPONSE["Compose response:<br/>{ user: {...}, recentOrders: [...], recommendations: [...] }"]
+    GW --> RESPONSE["Compose response:<br/>&#123; user: ... , recentOrders: [...], recommendations: [...] &#125;"]
 ```
 
 | When | How | Limitation |

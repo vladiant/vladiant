@@ -244,7 +244,7 @@ graph TB
 ```mermaid
 graph TB
     subgraph "Scenario 4: Schema Evolution"
-        OLD_SCHEMA["v1: { firstName, lastName }"] --> NEW_SCHEMA["v2: { fullName, nameComponents: { first, last } }"]
+        OLD_SCHEMA["v1: &#123; firstName, lastName &#125;"] --> NEW_SCHEMA["v2: &#123; fullName, nameComponents: &#123; first, last &#125; &#125;"]
     end
 ```
 
