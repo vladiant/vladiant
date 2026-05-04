@@ -560,7 +560,7 @@ sequenceDiagram
 
 ```
 ┌─────────────────────────────────────────────────────┐
-│  Baggage + TraceContext propagation                  │
+│  Baggage + TraceContext propagation                 │
 │                                                     │
 │  traceparent: 00-<trace_id>-<span_id>-01            │
 │  baggage: user_id=u-123,region=eu-west-1            │

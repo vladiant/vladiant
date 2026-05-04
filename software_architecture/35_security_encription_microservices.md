@@ -258,7 +258,7 @@ graph TD
         SVC[Service] -->|"Is user X allowed to<br/>DELETE /orders/123?"| OPA[OPA Sidecar<br/>/ External Server]
         OPA -->|Evaluate Rego policy| POLICY[(Policy Bundle<br/>Rego rules)]
         OPA -->|Check data| DATA[(External Data<br/>User roles, resource ownership)]
-        OPA -->>|"allow: true/false<br/>+ reason"| SVC
+        OPA -->>|"allow: true or false + reason"| SVC
     end
 
     subgraph "Policy Management"
