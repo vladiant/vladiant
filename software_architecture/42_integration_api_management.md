@@ -966,15 +966,15 @@ graph TB
 ### 13.2 API Health Dashboard
 
 ```
-┌─────────────────────────┬──────────┬────────┬────────┬─────────┐
-│ Endpoint                │ Traffic  │ p99    │ Errors │ Status  │
-├─────────────────────────┼──────────┼────────┼────────┼─────────┤
-│ GET  /v1/orders         │ 1.2K rps │ 45ms   │ 0.1%   │ ✅ OK   │
-│ POST /v1/orders         │ 200 rps  │ 120ms  │ 0.3%   │ ✅ OK   │
-│ POST /v1/payments       │ 180 rps  │ 350ms  │ 1.2%   │ ⚠️ WARN │
-│ GET  /v1/inventory      │ 3.5K rps │ 12ms   │ 0.0%   │ ✅ OK   │
-│ GET  /v1/users (deprecated) │ 5 rps│ 80ms   │ 0.0%   │ 🔴 DEPRECATED │
-└─────────────────────────┴──────────┴────────┴────────┴─────────┘
+┌─────────────────────────────┬──────────┬────────┬────────┬───────────────┐
+│ Endpoint                    │ Traffic  │ p99    │ Errors │ Status        │
+├─────────────────────────────┼──────────┼────────┼────────┼───────────────┤
+│ GET  /v1/orders             │ 1.2K rps │ 45ms   │ 0.1%   │ ✅ OK         │
+│ POST /v1/orders             │ 200 rps  │ 120ms  │ 0.3%   │ ✅ OK         │
+│ POST /v1/payments           │ 180 rps  │ 350ms  │ 1.2%   │ ⚠️ WARN       │
+│ GET  /v1/inventory          │ 3.5K rps │ 12ms   │ 0.0%   │ ✅ OK         │
+│ GET  /v1/users (deprecated) │ 5 rps    │ 80ms   │ 0.0%   │ 🔴 DEPRECATED │
+└─────────────────────────────┴──────────┴────────┴────────┴───────────────┘
 ```
 
 ---
