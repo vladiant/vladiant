@@ -567,9 +567,15 @@ stateDiagram-v2
     HalfOpen --> Closed: probe succeeds
     HalfOpen --> Open: probe fails
     
-    note right of Closed: Normal: all requests pass through
-    note right of Open: Fast fail: requests rejected immediately (5ms)
-    note right of HalfOpen: Test: allow 1 request through
+    note right of Closed
+        Normal: all requests pass through
+    end note
+    note right of Open
+        Fast fail: requests rejected immediately (5ms)
+    end note
+    note right of HalfOpen
+        Test: allow 1 request through
+    end note
 ```
 
 ### 9.3 Graceful Degradation
