@@ -1,0 +1,58 @@
+# Software Architecture — Microservices Patterns & Practices
+
+A comprehensive knowledge base covering microservices architecture patterns, design decisions, and operational practices.
+
+---
+
+## Table of Contents
+
+| # | Topic | Summary |
+|---|---|---|
+| 1 | [Loose Coupling & High Cohesion](01_microservices_loose_coupled_highly_cohesive.md) | Apply Domain-Driven Design bounded contexts, enforce API boundaries, and eliminate shared databases to keep services independently deployable and internally focused. |
+| 2 | [Java & .NET Microservice Communication](02_java_net_microservices_talk.md) | Use language-neutral protocols — REST/HTTP, gRPC (Protobuf), or async messaging (Kafka/RabbitMQ) — to enable polyglot service-to-service communication. |
+| 3 | [Cross-Cutting Concerns & Security](03_security_cross_cutting_concerns.md) | Handle security, logging, tracing, and config via the Sidecar/Service Mesh pattern and shared libraries — enforce consistency without duplicating code in every service. |
+| 4 | [Why Debugging Is Hard](04_microservice_debugging.md) | Distributed requests across N processes make single-step debugging impossible; rely on distributed tracing (OpenTelemetry), correlated structured logs, and trace-driven investigation. |
+| 5 | [Data Consistency](05_microservice_data_consistency.md) | With no cross-service ACID transactions, use Saga pattern for distributed writes, Outbox pattern for reliable event publishing, and accept eventual consistency as the default. |
+| 6 | [Scalability & Resilience](06_scalable_resilient_microservices.md) | Scale horizontally with stateless services and autoscaling; build resilience via circuit breakers, retries with backoff, bulkheads, and graceful degradation. |
+| 7 | [Service Discovery & Registration](07_service_discovery_registration.md) | Services register dynamically with a registry (Consul, Eureka, or Kubernetes DNS) so callers discover healthy instances at runtime — no hardcoded URLs. |
+| 8 | [Service Communication & Data Sharing](08_service_communication_data_sharing.md) | Sync (REST/gRPC) for queries, async (events/messaging) for commands and workflows; share data via APIs and events — never via shared databases. |
+| 9 | [Versioning & Backward Compatibility](09_versioning_backward_compatibility.md) | Version APIs (URL path for REST, package for gRPC), make only additive changes, deprecate with sunset headers, and use contract tests to prevent breaking consumers. |
+| 10 | [Monitoring & Troubleshooting](10_monitor_troubleshoot_microservices.md) | Implement the three pillars of observability — metrics (Prometheus), logs (Loki/ELK), and traces (Tempo/Jaeger) — with correlation via trace IDs and SLO-based alerting. |
+| 11 | [Deployments & Rollbacks](11_deployments_rollbacks_microservices.md) | Use rolling updates (default), canary with automated analysis for critical services, and blue-green for instant rollback; always keep schema migrations backward-compatible. |
+| 12 | [Testing & Continuous Integration](12_testing_continuous_integration_micorservices.md) | Follow the test pyramid: many unit tests, contract tests (Pact) at service boundaries, component tests with stubs, and few E2E tests; run all in CI under 15 minutes. |
+| 13 | [Service Governance & Lifecycle](13_service_governance_lifecycle_management.md) | Maintain a service catalog (Backstage) with ownership, lifecycle states (experimental → production → deprecated → retired), and automated production readiness reviews. |
+| 14 | [Security & Access Control](14_security_access_control_microservices.md) | OAuth 2.0/JWT at the edge, mTLS between services via service mesh, RBAC/ABAC per endpoint, and zero-trust networking with Kubernetes NetworkPolicies. |
+| 15 | [Data Integration & Migration](15_data_integration_migration_microservices.md) | Use CDC (Debezium) for near-real-time data sync, event-carried state transfer for local read caches, and CQRS read models for cross-service queries. |
+| 16 | [Service Composition & Orchestration](16_service_composition_orchestration.md) | Orchestration (central coordinator) for complex workflows needing visibility; choreography (event-driven) for loosely coupled, independently evolving flows. |
+| 17 | [Deploying C++ Microservices](17_deploy_cpp_microservices.md) | Containerize native binaries with multi-stage Docker builds, statically link or bundle dependencies, and deploy via Kubernetes like any other service. |
+| 18 | [Service Resiliency on Failures](18_service_resiliency_on_failures.md) | Timeouts on every call, circuit breakers for failing dependencies, bulkheads to isolate resource pools, retries with jitter, and graceful degradation with fallbacks. |
+| 19 | [C++ Frameworks for Microservices](19_cpp_frameworks_for_microservices.md) | Full frameworks (Oat++, Drogon, Pistache) for productivity or composable libraries (gRPC, Boost.Beast, libcurl) for maximum control and raw performance. |
+| 20 | [Event-Driven Architecture Pattern](20_event_driven_pattern.md) | Propagate state changes as immutable events through a broker (Kafka), decoupling producers from consumers in time and space for better scalability and resilience. |
+| 21 | [Service Registry Pattern](21_service_registry_pattern.md) | A central directory (Consul, Eureka, K8s DNS) where services register themselves and discover each other, enabling dynamic routing in ephemeral infrastructure. |
+| 22 | [Sidecar Pattern](22_sidecar_pattern.md) | Deploy a companion process alongside each service instance to handle cross-cutting concerns (networking, observability, security) without modifying application code. |
+| 23 | [Service Mesh Pattern](23_service_mesh_pattern.md) | A dedicated infrastructure layer (Istio/Linkerd) of sidecar proxies managed by a control plane — making service-to-service networking programmable, observable, and secure. |
+| 24 | [Backend for Frontend (BFF) Pattern](24_backend_for_frontend_pattern.md) | Create a dedicated backend per frontend type (web, mobile, IoT) that aggregates, transforms, and optimizes API responses for each client's specific needs. |
+| 25 | [Bulkhead Pattern](25_bulkhead_pattern.md) | Isolate components into independent compartments (thread pools, connection pools, pods) so a failure in one doesn't cascade and exhaust shared resources. |
+| 26 | [Saga Pattern](26_saga_pattern.md) | Replace distributed transactions with a sequence of local transactions, each with a compensating action — either orchestrated centrally or choreographed via events. |
+| 27 | [Outbox Pattern](27_outbox_pattern.md) | Write events to an outbox table in the same DB transaction as the business data, then asynchronously relay them to the message broker — guaranteeing atomic publish. |
+| 28 | [Self-Containment Pattern](28_self_containment_pattern.md) | Services maintain local copies of data they need (via events/replication) so they can fulfill requests without synchronous runtime dependencies on other services. |
+| 29 | [External Configuration Pattern](29_external_configuration_pattern.md) | Externalize all configuration (feature flags, secrets, endpoints) from code using ConfigMaps, Vault, or a config server — enabling runtime changes without redeployment. |
+| 30 | [Strangler (Fig) Pattern](30_strangler_pattern.md) | Incrementally migrate a monolith by routing requests through a facade, extracting bounded contexts one at a time into new services until the monolith can be retired. |
+| 31 | [Data Partitioning & Replication](31_data_partition_replication.md) | Shard data (hash, range, or geo-based) for write scalability; replicate across nodes for read scalability and fault tolerance — choosing the right consistency trade-off. |
+| 32 | [Service Partitioning & Scaling](32_service_partition_scaling.md) | Scale horizontally with HPA/KEDA on custom metrics, partition by tenant or geography for isolation, and right-size containers based on observed usage. |
+| 33 | [Orchestration vs. Choreography](33_service_orchestration_choreography.md) | Orchestration for complex multi-step workflows needing central visibility; choreography for decoupled event-driven flows; hybrid for real-world systems. |
+| 34 | [Common Development Challenges](34_most_common_microservice_development_challenges.md) | The top pain points: distributed debugging, data consistency, service sprawl, team coordination, network reliability, testing complexity, and operational overhead. |
+| 35 | [Security & Encryption](35_security_encription_microservices.md) | mTLS for transport encryption, envelope encryption for data at rest, SPIFFE/SPIRE for service identity, Vault for dynamic secrets, and OPA for policy enforcement. |
+| 36 | [Monitoring & Logging](36_monitoring_logging.md) | Structured JSON logs to stdout, the Four Golden Signals (latency, traffic, errors, saturation), OpenTelemetry collection, and Grafana LGTM stack for unified observability. |
+| 37 | [Service Tracing & Debugging](37_service_tracing_debugging.md) | W3C trace context propagation, OpenTelemetry auto+manual instrumentation, tail-based sampling, and trace waterfall analysis as the primary debugging workflow. |
+| 38 | [Testing & Quality Assurance](38_microservice_testing_qa.md) | Contract tests (Pact) are the key innovation — they validate inter-service compatibility without E2E tests; complement with component tests, performance baselines, and canary deploys. |
+| 39 | [Deployment & Rollback](39_service_deployment_rollback.md) | GitOps with Argo CD, canary rollouts with automated metric analysis, expand-contract DB migrations, feature flags to decouple deploy from release, and DORA metrics to measure. |
+| 40 | [Service Governance & Lifecycle](40_service_lifecycle_governance.md) | Service catalog (Backstage) for ownership and discovery, automated scorecards for production readiness, policy-as-code (Kyverno/OPA) for guardrails, and paved-road templates. |
+| 41 | [Service Migration & Modernization](41_service_migration_modernization.md) | Strangler Fig for incremental extraction, CDC (Debezium) for data migration, anti-corruption layers at legacy boundaries, and shadow testing to verify feature parity before cutover. |
+| 42 | [Integration & API Management](42_integration_api_management.md) | API Gateway for external traffic, service mesh for internal, OpenAPI/Protobuf/AsyncAPI specs in a registry, versioning with deprecation headers, and rate limiting per client. |
+| 43 | [Performance & Optimization](43_performance_service_optimization.md) | Trace-driven performance analysis, parallelize independent calls, async non-critical work, cache hot read paths, right-size containers, and optimize the boundaries (not just code). |
+| 44 | [Service Isolation on Shared Hosts](44_microservice_isolation.md) | Container resource limits (requests/limits), Guaranteed QoS for critical pods, namespace ResourceQuotas, NetworkPolicies, node taints/tolerations, and PriorityClasses. |
+| 45 | [Monorepo vs. Polyrepo](45_microservices_organization.md) | Monorepo for small/medium teams with shared stack (needs Bazel/Nx); polyrepo for large autonomous teams; hybrid (monorepo per domain, polyrepo across stacks) for most. |
+| 46 | [One Database vs. Separate Databases](46_one_database_vs_separate_database.md) | Database-per-service is the correct default — shared DB creates schema coupling that kills independent deployability. Use API composition, CQRS read models, and sagas for cross-service data needs. |
+
+* [50+ Microservices Interview Questions That Actually Appear in Real Interviews](https://javarevisited.substack.com/p/50-microservices-architecture-questions)
